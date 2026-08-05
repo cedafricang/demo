@@ -14,11 +14,7 @@ export function Hero() {
           <span className="italic text-copper">immersive AV.</span>
         </h1>
 
-        <p className="mt-8 max-w-lg font-body text-[16px] leading-relaxed text-stone/85">
-          A private, free session at the Experience Centre — built around the
-          space you&rsquo;re actually designing for. Tell us which world you
-          belong to, and we&rsquo;ll take it from there.
-        </p>
+       
 
         <div className="mt-11 flex flex-wrap items-center gap-8">
           <a

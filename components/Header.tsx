@@ -9,14 +9,20 @@ export function Wordmark({
   tone?: "dark" | "light";
   className?: string;
 }) {
+  // Dark tone = shown on light/cream backgrounds, so it needs the black
+  // logo for contrast. Light tone = shown on dark backgrounds (the hero),
+  // so it needs the white logo.
+  const src = tone === "dark" ? "/images/logo/shblack.png" : "/images/logo/shwhite.png";
+
   return (
-    <span
-      className={`font-display italic font-light tracking-[-0.01em] ${
-        tone === "dark" ? "text-ink" : "text-cream"
-      } ${className}`}
-    >
-      soundhous
-    </span>
+    <img
+      src={src}
+      alt="Soundhous"
+      className={`h-8 w-auto ${className}`}
+      onError={(e) => {
+        (e.currentTarget as HTMLImageElement).style.display = "none";
+      }}
+    />
   );
 }
 
@@ -37,7 +43,7 @@ export function Header() {
       }`}
     >
       <div className="container-page flex h-20 items-center justify-between">
-        <a href="#top" className="text-[24px] leading-none">
+        <a href="#top" className="leading-none">
           <Wordmark tone={scrolled ? "dark" : "light"} />
         </a>
 
