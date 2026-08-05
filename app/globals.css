@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-stone;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-cream text-charcoal font-body antialiased;
+    font-feature-settings: "ss01" on, "ss02" on;
+  }
+
+  ::selection {
+    background-color: #a87e5e33;
+    color: #1a1a16;
+  }
+
+  /* Visible, on-brand keyboard focus — never removed, never a default blue ring */
+  :focus-visible {
+    outline: 1.5px solid #a87e5e;
+    outline-offset: 3px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-label text-copper;
+  }
+
+  .eyebrow-smoke {
+    @apply font-mono text-[11px] uppercase tracking-label text-smoke;
+  }
+
+  .rule {
+    @apply h-px w-full bg-sand/60;
+  }
+
+  .container-page {
+    @apply mx-auto w-full max-w-page px-6 sm:px-10 lg:px-16;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wizard-step {
+  animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
