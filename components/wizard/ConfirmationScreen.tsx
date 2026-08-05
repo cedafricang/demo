@@ -21,18 +21,20 @@ export function ConfirmationScreen({
         is yours.
       </p>
 
-      <div className="mt-12 border-t border-sand pt-10">
-        <p className="eyebrow-smoke mb-6">What Happens Next</p>
-        <ol className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-          {processSteps.map((s) => (
-            <li key={s.n}>
-              <span className="font-display text-lg font-light italic text-copper">{s.n}</span>
-              <h4 className="mt-1 font-display text-lg font-normal text-ink">{s.title}</h4>
-              <p className="mt-2 font-body text-[13.5px] leading-relaxed text-smoke">{s.body}</p>
-            </li>
-          ))}
-        </ol>
-      </div>
+      {route.id !== "sonos" && (
+        <div className="mt-12 border-t border-sand pt-10">
+          <p className="eyebrow-smoke mb-6">What Happens Next</p>
+          <ol className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+            {processSteps.map((s) => (
+              <li key={s.n}>
+                <span className="font-display text-lg font-light italic text-copper">{s.n}</span>
+                <h4 className="mt-1 font-display text-lg font-normal text-ink">{s.title}</h4>
+                <p className="mt-2 font-body text-[13.5px] leading-relaxed text-smoke">{s.body}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
 
       <div className="mt-12 border border-sand bg-cream p-7 sm:p-9">
         <p className="eyebrow-smoke mb-5">Ready To Reach Us Directly?</p>
