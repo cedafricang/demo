@@ -143,7 +143,7 @@ export function ReviewScreen({
       {status === "error" && (
         <p className="mt-4 font-body text-[13px] text-copper">
           {errorMessage ||
-            "Something interrupted the request. Please try again, or reach us directly at marketing@ced.africa."}
+            "Something interrupted the request. Please try again, or reach us directly at hello@soundhous.com."}
         </p>
       )}
 

@@ -5,7 +5,7 @@ import { checkSlotStillAvailable } from "@/lib/bookingSync";
 import { buildRescheduleUrl } from "@/lib/rescheduleToken";
 
 const TEAM_EMAIL = "hello@soundhous.com";
-const FROM_EMAIL = process.env.BOOKING_FROM_EMAIL ?? "Soundhous Experience Centre <marketing@ced.africa>";
+const FROM_EMAIL = process.env.BOOKING_FROM_EMAIL ?? "Soundhous Experience Centre <hello@soundhous.com>";
 
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 

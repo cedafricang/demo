@@ -27,7 +27,7 @@ export const processSteps = [
 ];
 
 export const contactDetails = {
-  email: "marketing@ced.africa",
+  email: "hello@soundhous.com",
   whatsapp: "+234 902 754 9690",
   visit: "17 Adeyemo Alakija Street, Victoria Island, Lagos — by appointment",
   hours: "Monday–Saturday, 9am–6pm WAT",
